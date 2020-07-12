@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Logistic Regression (AND OR Gates)</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+</head>
+
+<body>
+    <div class="container mb-4 mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Title -->
+                <h1 style="font-size: 3.5rem;">
+                    <font class="text-primary">L</font>ogistic <font class="text-primary">R</font>egression <font
+                        class="text-muted"> ( AND OR Gates ) </font>
+                </h1>
+                <h4>In statistics, the logistic model (or logit model) is used to model the probability of a certain
+                    class or event existing such as pass/fail, win/lose, alive/dead or healthy/sick. This can be
+                    extended to model several classes of events such as determining whether an image contains a cat,
+                    dog, lion, etc. Each object being detected in the image would be assigned a probability between 0
+                    and 1, with a sum of one. <a href="https://en.wikipedia.org/wiki/Logistic_regression"
+                        target="_blank">See
+                        More</a></h4>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <!--Change no. of epochs -->
+                            <h4>Epochs</h4>
+                            <select class="custom-select" id="epochs_id"
+                                oninput="javascript: epochs = parseInt(this.value);">
+                                <option selected value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="300">300</option>
+                                <option value="400">400</option>
+                                <option value="600">600</option>
+                                <option value="800">800</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- Change learning rate -->
+                            <h4>Learning Rate</h4>
+                            <select class="custom-select" id="learning_select_id"
+                                oninput="javascript: learningRate = parseFloat(this.value);">
+                                <option selected value="0.1">0.1</option>
+                                <option value="0.3">0.3</option>
+                                <option value="0.01">0.01</option>
+                                <option value="0.03">0.03</option>
+                            </select>
+                        </div>
+                        <!-- Mean Square Error for both AND and OR GATE  -->
+                        <h4>Mean Square Error <font class="text-primary" id="error_id">0.00</font>
+                        </h4>
+                        <!-- Showing training progress -->
+                        <div class="progress mb-2" id="progress_class_id">
+                            <div class="progress-bar" id="progress_id" role="progressbar" style="width: 0%;"
+                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <button class="btn btn-primary" style="cursor: pointer"
+                            onclick="javascript: startTraining(this)"><i class="fas fa-caret-right"></i> Start
+                            Training</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <h4 class="text-muted">AND Gate</h4>
+            <!-- Canvas showing AND GATE data  -->
+            <canvas id="myCanvasAND" height="300" width="300" class="canvas"></canvas><br>
+            <h4 class="text-muted mt-4">OR Gate</h4>
+            <!-- Canvas showing OR GATE data -->
+            <canvas id="myCanvasOR" height="300" width="300" class="canvas"></canvas><br /><br />
+        </center>
+        
+        <div class="mt-2 card shadow-sm">
+            <div class="card-body">
+                <h4>Love Saroha <br>
+                    <font class="text-primary"><i class="fad fa-envelope"></i> lovesaroha1994@gmail.com</font>
+                </h4>
+                <h4>Source Code <br><a href="https://github.com/lovesaroha/Logistic-Regression-AND-OR"
+                        target="_blank"><i class="fad fa-code-merge text-primary"></i>
+                        https://github.com/lovesaroha/Logistic-Regression-AND-OR</a></h4>
+                <h4>Website <br><a href="https://lovesaroha.com"><i class="fad fa-link text-primary"></i>
+                        www.lovesaroha.com</a></h4>
+            </div>
+        </div>
+    </div>
+    <!-- Include script.js file -->
+    <script type="text/javascript" src="./assets/js/loakuMath.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
