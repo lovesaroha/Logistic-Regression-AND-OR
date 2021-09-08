@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="logistic regression and or">
+    <title>Logistic Regression (AND OR)</title>
+    <!-- Include css files. -->
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/fa.min.css">
+</head>
+
+<body>
+    <div class="container w-full mx-auto max-w-8/12 md:px-4 pb-8">
+        <!-- Header. -->
+        <center>
+            <h1 class="font-bold display-1 underline">
+                Logistic Regression (AND OR Gates)
+            </h1>
+            <h4 class="text-subtitle mb-6">In statistics, the logistic model (or logit model) is used to model the
+                probability of a certain
+                class or event existing such as pass/fail, win/lose, alive/dead or healthy/sick. This can be
+                extended to model several classes of events such as determining whether an image contains a cat,
+                dog, lion, etc. Each object being detected in the image would be assigned a probability between 0
+                and 1, with a sum of one.</h4>
+        </center>
+        <!-- Config. -->
+        <div class="card p-2 px-4 mx-auto max-w-xl mb-2">
+            <!--Change no. of epochs. -->
+            <h4>Epochs</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                id="epochs_id" oninput="javascript: epochs = parseInt(this.value);">
+                <option selected value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="600">600</option>
+                <option value="800">800</option>
+                <option value="1000">1000</option>
+            </select>
+            <!-- Change learning rate. -->
+            <h4>Learning Rate</h4>
+            <select class="w-full border-2 border-gray p-2 mb-3 capitalize focus:outline-none focus:border-primary"
+                id="learning_select_id" oninput="javascript: learningRate = parseFloat(this.value);">
+                <option selected value="0.1">0.1</option>
+                <option value="0.3">0.3</option>
+                <option value="0.01">0.01</option>
+                <option value="0.03">0.03</option>
+            </select>
+            <!-- Mean Square Error for both AND and OR GATE  -->
+            <h4>Error <font class="text-primary" id="error_id">0.00</font>
+            </h4>
+            <!-- Showing training progress. -->
+            <div class="overflow-hidden mb-2 h-2 flex bg-light">
+                <div style="width: 0%;" id="progress_id"
+                    class="flex flex-col whitespace-nowrap justify-center bg-primary"></div>
+            </div>
+            <button style="cursor: pointer" onclick="javascript: startTraining(this)">
+                Start Training</button>
+        </div>
+    </div>
+    <center>
+        <h4 class="text-muted">AND Gate</h4>
+        <!-- Canvas showing AND GATE data.  -->
+        <canvas id="myCanvasAND" height="300" width="300" class="shadow-md mt-3 mb-2 hide-on-md"></canvas><br>
+        <h4 class="text-muted mt-4">OR Gate</h4>
+        <!-- Canvas showing OR GATE data. -->
+        <canvas id="myCanvasOR" height="300" width="300" class="shadow-md mt-3 mb-2 hide-on-md"></canvas><br /><br />
+    </center>
+
+    <!-- Footer. -->
+    <div class="mb-2 card text-center p-2 mx-auto max-w-xl">
+        <h4 class="text-subtitle"><a href="https://github.com/lovesaroha/Logistic-Regression-AND-OR"
+                target="_blank">LoveSaroha/Logistic-Regression-AND-OR</a></h4>
+        <h3 class="text-subtitle font-bold mb-0 hover:underline cursor-pointer"
+            onclick="javascript: window.location = 'https://lovesaroha.com';">Love Saroha</h3>
+        <h4 class="text-gray">lovesaroha1994@gmail.com</h4>
+    </div>
+    <!-- Include script.js file -->
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
