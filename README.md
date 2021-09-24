@@ -3,4 +3,4 @@ In statistics, the logistic model (or logit model) is used to model the probabil
 
 ![game](https://raw.githubusercontent.com/lovesaroha/gimages/main/15.png)
 
-[lovesaroha/p/Logistic-Regression-AND-OR](https://lovesaroha.com/p/Logistic-Regression-AND-OR)
+[lovesaroha/Logistic-Regression-AND-OR](https://ml.lovesaroha.com/Logistic-Regression-AND-OR)
